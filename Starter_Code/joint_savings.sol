@@ -73,12 +73,12 @@ contract JointSavings {
     }
 
     // Define a `public payable` function named `deposit`.
-    function deposit(uint amount) public payable {
+    function deposit() public payable {
 
         /*
         Call the `contractBalance` variable and set it equal to the balance of the contract by using `address(this).balance`.
         */
-        contractBalance = address(this).balance + amount;
+        contractBalance = address(this).balance;
     }
 
     /*
@@ -97,3 +97,4 @@ contract JointSavings {
     function() external payable {
     }
 }
+
